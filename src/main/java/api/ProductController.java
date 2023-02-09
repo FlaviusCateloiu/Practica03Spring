@@ -12,7 +12,7 @@ public class ProductController {
     @Autowired
     private IProductService productService;
 
-    @GetMapping(value = "/product")
+    @GetMapping(value = "/products")
     public ResponseEntity<Set<Product>> getProducts() {
         Set<Product> products = productService.findAll();
         return new ResponseEntity<>(products, HttpStatus.OK);
